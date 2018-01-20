@@ -1,7 +1,9 @@
 import time
+from pyvirtualdisplay import Display
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-
+display = Display(visible=0, size=(1366, 768))
+display.start()
 chrome_options = Options()
 chrome_options.add_argument("--headless")
 chrome_options.add_argument("--window-size=1366x768")
