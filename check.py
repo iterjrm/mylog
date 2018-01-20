@@ -1,4 +1,5 @@
 import time
+import sys
 from pyvirtualdisplay import Display
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -31,6 +32,7 @@ def iter_login():
         namee = browser.find_element_by_xpath("/html/body/div[3]/ng-view/div[1]/form/md-card[1]/div/div[3]/input")
         name = namee.get_attribute("value")
         print("Name : "+name)
+        sys.stdout.write("Name : "+name)
 
 
 
@@ -53,6 +55,9 @@ def iter_login():
         regno=regnoe.get_attribute("value")
         namee= browser.find_element_by_xpath("/html/body/div[3]/ng-view/div[1]/form/md-card[1]/div/div[3]/input")
         name = namee.get_attribute("value")
+        print("Name : "+name)
+        sys.stdout.write("Name : "+name)
+        
 
 
 
