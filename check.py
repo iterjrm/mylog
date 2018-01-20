@@ -15,35 +15,35 @@ def iter_login():
     browser.get('http://111.93.164.202:8282/CampusPortalSOA/index#/')
     try:
         try:
-            time.sleep(2)
+            time.sleep(1)
             user = browser.find_element_by_xpath("/html/body/div[3]/ng-view/div/div/div/div[2]/form/div[1]/input")
             user.send_keys('1641012112')
         except:
-            time.sleep(2)
+            time.sleep(1)
             user = browser.find_element_by_xpath("//input[@ng-model='ctrl.user.username']")
             user.send_keys('1641012112')
         try:
-            time.sleep(2)
+            time.sleep(1)
             passw = browser.find_element_by_xpath("/html/body/div[3]/ng-view/div/div/div/div[2]/form/div[2]/input")
             passw.send_keys('sikujyoti')
         except:
-            time.sleep(2)
+            time.sleep(1)
             passw = browser.find_element_by_xpath("//input[@ng-model='ctrl.user.password']")
             passw.send_keys('sikujyoti')
         try:
-            time.sleep(2)
+            time.sleep(1)
             but = browser.find_element_by_xpath("/html/body/div[3]/ng-view/div/div/div/div[2]/form/md-input-container/div/button")
             but.click()
         except:
-            time.sleep(2)
+            time.sleep(1)
             but = browser.find_element_by_xpath("//button[@type='submit']")
             but.click()
         try:
-            time.sleep(2)
+            time.sleep(1)
             infbt = browser.find_element_by_xpath("/html/body/div[3]/ng-view/md-content/md-grid-list/md-grid-tile[1]/figure/md-icon")
             infbt.click()
         except:
-            time.sleep(2)
+            time.sleep(1)
             infbt = browser.find_element_by_xpath(
                 "/html/body/div[3]/ng-view/md-content/md-grid-list/md-grid-tile[1]/figure")
             infbt.click()
@@ -53,7 +53,7 @@ def iter_login():
                 "/html/body/div[3]/ng-view/md-content/md-grid-list/md-grid-tile/figure/md-icon")
             myinfo.click()
         except:
-            time.sleep(2)
+            time.sleep()
             myinfo = browser.find_element_by_xpath("//md-icon[@md-svg-icon='static/images/MyInfo.svg']")
             myinfo.click()
         try:
@@ -63,10 +63,8 @@ def iter_login():
             namee = browser.find_element_by_xpath("/html/body/div[3]/ng-view/div[1]/form/md-card[1]/div/div[3]/input")
             name = namee.get_attribute("value")
             print("Name : " + name)
-            sys.stdout.write("Name : " + name)
-            time.sleep(5)
         except:
-            time.sleep(2)
+            time.sleep(1)
             regnoe = browser.find_element_by_xpath("//input[@ng-model='StudentInfo.enrollmentno']")
             regno = regnoe.get_attribute("value")
             namee = browser.find_element_by_xpath("//input[@ng-model='StudentInfo.name']")
