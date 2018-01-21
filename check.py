@@ -8,6 +8,7 @@ display.start()
 chrome_options = Options()
 chrome_options.add_argument("--headless")
 chrome_options.add_argument("--window-size=1366x768")
+chrome_options.add_argument('no-sandbox')
 chrome_options.add_argument('disable-infobars')
 chrome_driver = "/home/jrmtzar/jrm/chromedriver"
 def iter_login():
