@@ -53,7 +53,7 @@ def iter_login():
                 "/html/body/div[3]/ng-view/md-content/md-grid-list/md-grid-tile/figure/md-icon")
             myinfo.click()
         except:
-            time.sleep()
+            time.sleep(1)
             myinfo = browser.find_element_by_xpath("//md-icon[@md-svg-icon='static/images/MyInfo.svg']")
             myinfo.click()
         try:
