@@ -75,7 +75,7 @@ def iter_login():
             name = namee.get_attribute("value")
             print("Name : " + name)
     except:
-        print("hauni")
+        print("Not Happening")
 
 
 
