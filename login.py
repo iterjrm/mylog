@@ -11,26 +11,29 @@ chrome_options.add_argument("--window-size=1366x768")
 chrome_options.add_argument('no-sandbox')
 chrome_options.add_argument('disable-infobars')
 chrome_driver = "/home/jrmtzar/jrm/chromedriver"
+url = "anyurl"
+username = "your_user_name"
+password = "your_password"
 def iter_login():
     browser = webdriver.Chrome(chrome_options=chrome_options, executable_path=chrome_driver)
-    browser.get('http://111.93.164.202:8282/CampusPortalSOA/index#/')
+    browser.get(url)
     try:
         try:
             time.sleep(1)
             user = browser.find_element_by_xpath("/html/body/div[3]/ng-view/div/div/div/div[2]/form/div[1]/input")
-            user.send_keys('1641012112')
+            user.send_keys(username)
         except:
             time.sleep(1)
             user = browser.find_element_by_xpath("//input[@ng-model='ctrl.user.username']")
-            user.send_keys('1641012112')
+            user.send_keys(username)
         try:
             time.sleep(1)
             passw = browser.find_element_by_xpath("/html/body/div[3]/ng-view/div/div/div/div[2]/form/div[2]/input")
-            passw.send_keys('sikujyoti')
+            passw.send_keys(password)
         except:
             time.sleep(1)
             passw = browser.find_element_by_xpath("//input[@ng-model='ctrl.user.password']")
-            passw.send_keys('sikujyoti')
+            passw.send_keys(password)
         try:
             time.sleep(1)
             but = browser.find_element_by_xpath("/html/body/div[3]/ng-view/div/div/div/div[2]/form/md-input-container/div/button")
